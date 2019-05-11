@@ -1,0 +1,35 @@
+parent: simplicity
+name: theme_roselle
+display_name: theme roselle
+version: 1.0.0
+assets:
+  use_parent_assets: true
+
+global_settings:
+  configuration:
+    PS_IMAGE_GENERATION_METHOD: 1
+  hooks:
+    modules_to_hook:
+      displayBanner:
+        - ps_banner
+      displayNav1:
+        - simplicity_headerbar
+      displayNav2:
+        - ps_languageselector
+        - ps_currencyselector
+        - ps_customersignin
+        - ps_shoppingcart
+      displayTop:
+        - simplicity_logo
+        - ps_mainmenu
+      displayNavFullWidth:
+        - ps_imageslider
+      displayHome:
+        - ps_customtext
+      displayWrapperBottom:
+        - simplicity_footerbar
+      displayFooterBefore:
+        - ps_emailsubscription
+        - ps_socialfollow
+      displayFooter:
+        - ps_linklist
