@@ -1,4 +1,4 @@
-#header {
+#header, body#checkout #header {
   position: relative;
 
   #_desktop_search_me,
@@ -9,26 +9,36 @@
     margin-top: 0px;
   }
 
+  #roselle-navbar {
+    border-width: 0 0 1px;
+    box-shadow: 0 0.5px 2px -1px rgba(0, 0, 0, .75);
+  }
   .navbar-fixed-top {
     top: 0;
     position: fixed;
-    border-width: 0 0 1px;
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0.5px 2px -1px rgba(0, 0, 0, .75);
-    /* transition: all 0.6s; */
     z-index: 100;
   }
 
   .header-nav {
     .right-nav {
-      position: relative;
-      z-index: 11;
     }
     .blockcart {
       margin-bottom: 0;
     }
     .user-info {
       margin-bottom: 0;
+    }
+    .block-social {
+      text-align: left;
+      padding-left: 0;
+      ul {
+        margin-bottom: 0;
+        li {
+          width: 24px;
+          height: 24px;
+        }
+      }
     }
   }
 
@@ -38,40 +48,32 @@
       padding: 0;
       padding-top: 4px;
       position: absolute;
-      z-index: 9;
+      z-index: 11;
       top: -50px;
-      left: 0;
-      display: block;
-      width: 100%;
-
+      left: 50%;
+      margin-left: -138px; /* max-width /2 */
+      transition: all 0.4s ease 0s;
       a {
-        max-width: 275px;
+        max-width: 276px;
         display: block;
         margin: auto;
-        transition: all 0.6s;
+        transition: all 0.4s ease 0s;
       }
-
       img {
         max-width: 100%;
-        /*
-        border: 6px solid #fff;
-        border-radius: 100px;
-        */
       }
-
       .logo {
         display: block;
         height: auto;
         max-height: initial;
-        transition: all 0.4s ease 0s;
       }
-
       &.shrink {
+        margin-left: -54px; /* max-width /2 */
+        a {
+          max-width: 106px;
+        }
         img {
           border-width: 2px;
-        }
-        a {
-          max-width: 85px;
         }
       }
     }
@@ -79,8 +81,6 @@
     .menu-wrapper {
       margin: 0;
       padding: 0;
-      position: relative;
-      z-index: 10;
       width: 100%;
       .menu {
         width: 100%;
@@ -97,6 +97,11 @@
         }
       }
     }
+  }
+
+  .header-bottom {
+    min-height: 180px;
+    background: #f1ede7;
   }
 
   .scroll-down {
@@ -139,11 +144,11 @@
     .header-top {
       .logo-wrapper {
         .logo {
-          margin-left: 90px;
+          /*margin-left: 90px;*/
         }
         &.shrink {
           .logo {
-            margin-left: 35px;
+            /*margin-left: 35px;*/
           }
         }
       }

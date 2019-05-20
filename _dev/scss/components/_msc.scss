@@ -10,14 +10,15 @@ msc-sidebar[open] nav {
 }
 
 msc-sidebar nav {
-  width: 55vw;
+  width: 60vw;
   height: 100%;
   display: block;
-  /*position: relative;*/
 }
 
 msc-sidebar:not(:defined) {
   visibility: hidden;
   height: 0;
   overflow: hidden;
+
+  display: none;
 }

@@ -1,3 +1,4 @@
+/* footer icons */
 @keyframes blinker {
   50% {
     transform: scale(1.2);
@@ -40,5 +41,12 @@
   }
   75% {
     transform: translateX(-10px);
+  }
+}
+
+/* moving-dialogue */
+@keyframes blink {
+  to {
+    opacity: .0;
   }
 }

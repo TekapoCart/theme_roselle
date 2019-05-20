@@ -1,0 +1,23 @@
+#roselle-navbar-placeholder,
+#wrapper,
+#carousel,
+#footer > .container,
+.copyright,
+#products .product-description,
+.product-miniature .product-description {
+  background: $primary-background;
+}
+
+#products .highlighted-informations,
+.featured-products .highlighted-informations,
+.product-accessories .highlighted-informations,
+.product-miniature .highlighted-informations {
+  background: $primary-background;
+}
+
+#products .variant-links,
+.featured-products .variant-links,
+.product-accessories .variant-links,
+.product-miniature .variant-links {
+  background: $primary-background;
+}

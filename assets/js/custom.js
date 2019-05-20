@@ -1,34 +1,48 @@
-/*
- * Custom code goes here.
- * A template should always ship with an empty custom.js
- */
-
-var navbar = document.getElementById("roselle-navbar");
-var stickyPos = $('#roselle-navbar').height();
-
-window.onscroll = function() {
-    logoFunction();
-};
-
-window.resize = function() {
-    logoFunction();
-}
-
-function logoFunction() {
-    if (document.body.id === 'index' && window.pageYOffset < stickyPos) {
-        navbar.classList.remove("navbar-fixed-top");
-        $('.logo-wrapper').removeClass('shrink');
-        $('#roselle-navbar-placeholder').css('height', 0);
+// Shrinking LOGO
+const navbar = document.querySelector('#roselle-navbar'),
+    navbarPH = document.querySelector('#roselle-navbar-placeholder'),
+    logoWP = document.querySelector('.logo-wrapper'),
+    stickyPos = navbar.offsetHeight;
+function logoShrink() {
+    if (window.pageYOffset < stickyPos) {
+        navbar.classList.remove('navbar-fixed-top');
+        logoWP.classList.remove('shrink');
+        navbarPH.style.height = 0;
     } else {
-        navbar.classList.add("navbar-fixed-top");
-        $('.logo-wrapper').addClass('shrink');
-        $('#roselle-navbar-placeholder').css('height', stickyPos);
+        navbar.classList.add('navbar-fixed-top');
+        logoWP.classList.add('shrink');
+        navbarPH.style.height = stickyPos;
     }
 }
 
+// Moving God
+const movingArea = document.querySelector('#moving-area'),
+    movingItem = document.querySelector('#moving-item'),
+    movingPos = movingArea !== null ? movingArea.offsetTop + movingArea.offsetHeight / 2 : 0,
+    desktopDialogue = document.querySelector('#desktop-dialogue'),
+    mobileDialogue = document.querySelector('#mobile-dialogue');
+function startMoving() {
+    if (movingPos > 0 && window.pageYOffset + window.outerHeight > movingPos) {
+        movingItem.classList.add('enlarge');
+        desktopDialogue.style.visibility = 'visible';
+        mobileDialogue.style.display = 'block';
+    } else {
+        // movingItem.classList.remove('enlarge');
+    }
+}
+
+window.onscroll = function() {
+    logoShrink();
+    startMoving();
+};
+window.onresize = function() {
+    logoShrink();
+    startMoving();
+};
+
 (function() {
 
-    logoFunction();
+    logoShrink();
 
     let pack;
     if (typeof navigator.scriptList == 'undefined') {

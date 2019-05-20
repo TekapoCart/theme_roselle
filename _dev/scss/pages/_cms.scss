@@ -1,0 +1,45 @@
+.cms-category-desc {
+  margin-bottom: $between-block-spacing;
+}
+
+.cms-page-list,
+.cms-subcategory-list {
+
+  li {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px;
+    padding: 10px;
+    /*background: $focus-background;*/
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .cms-page-title,
+  .cms-subcategory-title {
+
+  }
+
+  .cms-page-desc,
+  .cms-subcategory-desc {
+    color: $listing-desc-color;
+    font-size: 14px;
+  }
+
+}
+
+.grid-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  min-width: 200px;
+}
+
+@media ( min-width: 1080px ) {
+  .grid-col--3 {
+    display: none;
+  }
+}

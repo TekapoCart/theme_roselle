@@ -4,6 +4,18 @@ display_name: theme roselle
 version: 1.0.0
 assets:
   use_parent_assets: true
+  js:
+    cms:
+      - id: js-colcade
+        path: js/colcade/colcade.js
+        priority: 500
+        position: bottom
+  css:
+    cms:
+      - id: css-colcade
+        path: js/colcade/colcade.css
+        priority: 500
+        media: all
 
 global_settings:
   configuration:
@@ -11,9 +23,9 @@ global_settings:
   hooks:
     modules_to_hook:
       displayBanner:
-        - ps_banner
-      displayNav1:
         - simplicity_headerbar
+      displayNav1:
+        - ps_socialfollow
       displayNav2:
         - ps_languageselector
         - ps_currencyselector
@@ -24,7 +36,10 @@ global_settings:
         - ps_mainmenu
       displayNavFullWidth:
         - ps_imageslider
+        - ps_banner
       displayHome:
+        - simplicity_cmsblock
+      displayHomeAfter:
         - ps_customtext
       displayWrapperBottom:
         - simplicity_footerbar
@@ -70,3 +85,8 @@ global_settings:
       width: 500
       height: 500
       scope: []
+
+theme_settings:
+  default_layout: layout-full-width
+  layouts:
+    contact: layout-left-column
