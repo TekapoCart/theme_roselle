@@ -22,9 +22,6 @@ body {
 
 .block-spacing {
   margin-bottom: $between-block-spacing;
-  &:first-child {
-    margin-top: $between-block-spacing;
-  }
 }
 
 body#checkout #header .header-nav,
@@ -47,60 +44,9 @@ body#checkout #header .header-top {
   color: $primary-link-color;
 }
 
-/* intro */
-.intro {
-  padding-top: 30px;
-  padding-bottom: 80px;
-  min-height: 450px;
-  background: $primary-background;
-  h1 {
-    font-size: 35px;
-    line-height: 50px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+@media (max-width: 767px) {
+  .block_newsletter {
+    border-bottom-color: transparent;
   }
-  h3 {
-    font-size: 16px;
-    background: url("https://roselle.tekapo.space/img/cms/roselle/roselle-line.png") repeat-x center 9px;
-    line-height: 20px;
-    span {
-      background: $primary-background;
-      padding: 0 10px;
-    }
-  }
-  p {
-    font-size: 16px;
-    color: #373a3c;
-    text-align: justify;
-    padding: 20px 0;
-  }
-  img {
-    max-width: 100%;
-  }
-  /*
-  hr {
-    padding: 0;
-    border: none;
-    border-top: 1px solid #373a3c;
-    color: #373a3c;
-    text-align: center;
-    font-size: 12px;
-    margin-bottom: 40px;
-    &:after {
-      content: "✿";
-      display: inline-block;
-      position: relative;
-      top: -0.7em;
-      font-size: 1.5em;
-      padding: 0 0.25em;
-      background: $primary-background;
-    }
-  }
-  */
 }
 
-@media (max-width : 374px) {
-  .intro {
-    zoom: 0.85;
-  }
-}
