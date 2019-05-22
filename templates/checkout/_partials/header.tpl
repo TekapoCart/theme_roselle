@@ -34,13 +34,11 @@
 
                 {* 手機版 start *}
                 <div class="hidden-md-up text-sm-center mobile">
-                    <div class="float-xs-left">
-                        <div class="top-logo" id="_mobile_logo"></div>
-                    </div>
-
-                    <div class="float-xs-right" id="menu-icon">
+                    <div class="float-xs-left" id="menu-icon">
                         <i class="material-icons d-inline">menu</i>
                     </div>
+
+                    <div class="top-logo" id="_mobile_logo"></div>
 
                     <div class="clearfix"></div>
                 </div>
@@ -58,7 +56,7 @@
 </div>
 
 {* sidebar start *}
-<msc-sidebar id="mobile_top_menu_msc_wrapper" side="right">
+<msc-sidebar id="mobile_top_menu_msc_wrapper" side="left">
     <nav>
         <div class="header">
             <a onclick="(() => {

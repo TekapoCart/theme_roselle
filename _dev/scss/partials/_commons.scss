@@ -20,8 +20,12 @@ body {
   min-height: 450px;
 }
 
-.block-spacing {
-  margin-bottom: $between-block-spacing;
+h1, .block-spacing {
+  margin-bottom: $primary-block-spacing;
+}
+
+h1 {
+  margin-top: $secondary-block-spacing;
 }
 
 body#checkout #header .header-nav,
@@ -50,3 +54,7 @@ body#checkout #header .header-top {
   }
 }
 
+#mobile_top_menu_msc_wrapper .js-top-menu-bottom a,
+#mobile_top_menu_wrapper .js-top-menu-bottom a {
+  color: #000;
+}

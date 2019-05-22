@@ -154,6 +154,17 @@
   #header, body#checkout #header {
     .header-top {
       background: transparent;
+      position: relative;
+    }
+    .top-logo {
+      position: absolute;
+      left: 50%;
+      top: 1px;
+      padding-top: 0;
+      margin-left: -38px;
+    }
+    .logo {
+      max-height: 76px;
     }
   }
 
