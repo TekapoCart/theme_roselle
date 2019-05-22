@@ -1,17 +1,17 @@
 msc-sidebar {
-  --overlay-color: rgba(0, 0, 0, .2);
+  --overlay-color: rgba(0, 0, 0, .4);
   --timing-function: cubic-bezier(0, 0, .21, 1);
   --duration: 233ms;
   --z-index: 1000;
 }
 
 msc-sidebar[open] nav {
-  background: #fff;
+  background: $primary-background;
 }
 
 msc-sidebar nav {
-  width: 60vw;
-  height: 100%;
+  width: 70vw;
+  min-height: 100%;
   display: block;
 }
 
@@ -21,4 +21,50 @@ msc-sidebar:not(:defined) {
   overflow: hidden;
 
   display: none;
+}
+
+#mobile_top_menu_msc_wrapper {
+  .header {
+    height: 60px;
+    border-bottom: 1px solid $mobile-seperator-color;
+    a {
+      display: inline-block;
+      padding: 20px;
+    }
+  }
+  .body {
+    padding-top: 20px;
+  }
+  .top-menu {
+    li {
+      padding-left: 20px;
+      padding-right: 20px;
+      &:hover {
+        background: $focus-background;
+      }
+    }
+    .current, .on {
+      & > a {
+        color: $primary-link-color;
+      }
+    }
+    .sub-menu {
+      background: transparent;
+      li > a {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+  .block-social {
+    padding-left: 30px;
+    padding-bottom: 30px;
+  }
+
+  .dropdown select {
+    background: $primary-background;
+  }
+
+  #_mobile_language_selector, #_mobile_currency_selector {
+    margin-left: 20px;
+  }
 }

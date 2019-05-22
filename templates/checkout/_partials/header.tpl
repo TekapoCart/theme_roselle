@@ -60,17 +60,26 @@
 {* sidebar start *}
 <msc-sidebar id="mobile_top_menu_msc_wrapper" side="right">
     <nav>
-        <div class="nav__section">
-            <h4>{l s='Main menu' d='Shop.Theme.Global'}</h4>
-            <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
-            <!-- 篩選商品 -->
-            <div id="_mobile_search_filters"></div>
+        <div class="header">
+            <a onclick="(() => {
+			document.querySelector('#mobile_top_menu_msc_wrapper').curtainCall();
+		})()"><i class="material-icons float-xs-left">close</i></a>
         </div>
-        <div class="nav__section">
-            <h4>{l s='Settings' d='Shop.Theme.Global'}</h4>
-            <div class="js-top-menu-bottom">
-                <div id="_mobile_language_selector"></div>
-                <div id="_mobile_currency_selector"></div>
+        <div class="body">
+            <div class="nav__section">
+                <!--<h4>{l s='Main menu' d='Shop.Theme.Global'}</h4>-->
+                <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
+                <!-- 篩選商品 -->
+                <div id="_mobile_search_filters"></div>
+            </div>
+            <div class="nav__section">
+                <!--<h4>{l s='Settings' d='Shop.Theme.Global'}</h4>-->
+                <div class="js-top-menu-bottom">
+                    <div id="_mobile_user_info"></div>
+                    <div id="_mobile_language_selector"></div>
+                    <div id="_mobile_currency_selector"></div>
+                    {hook h='displayNav1'}
+                </div>
             </div>
         </div>
     </nav>

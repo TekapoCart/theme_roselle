@@ -51,7 +51,8 @@ window.onresize = function() {
 
     pack = [
         '/js/msc/class-msc-sidebar.js',
-        '/js/msc/wcl.js'
+        '/js/msc/wcl.js',
+        '/js/msc/class-msc-select.js'
     ];
 
     for (var i=-1,l=pack.length;++i<l;) {

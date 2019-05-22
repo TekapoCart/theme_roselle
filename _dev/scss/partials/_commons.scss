@@ -20,12 +20,10 @@ body {
   min-height: 450px;
 }
 
-#content {
-  .content-block {
-    margin-bottom: $between-block-spacing;
-    &:first-child {
-      margin-top: $between-block-spacing;
-    }
+.block-spacing {
+  margin-bottom: $between-block-spacing;
+  &:first-child {
+    margin-top: $between-block-spacing;
   }
 }
 
@@ -42,6 +40,11 @@ body#checkout #header .header-top {
     color: $primary-link-color;
     animation: blinker 1.5s linear infinite;
   }
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: $primary-link-color;
 }
 
 /* intro */
