@@ -13,12 +13,12 @@
                 {/foreach}
             </ul>
             <mdc-select class="hidden-md-up" data-type="filled">
+                <label>{l s='Currency:' d='Shop.Theme.Global'}</label>
                 <select name="mdc-select" slot="select">
                     {foreach from=$currencies item=currency}
                         <option value="{$currency.url}"{if $currency.current} selected="selected"{/if}>{$currency.iso_code} {$currency.sign}</option>
                     {/foreach}
                 </select>
-                <label>{l s='Currency:' d='Shop.Theme.Global'}</label>
             </mdc-select>
         </div>
     </div>

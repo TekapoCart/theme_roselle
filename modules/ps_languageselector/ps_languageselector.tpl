@@ -12,12 +12,12 @@
                 {/foreach}
             </ul>
             <mdc-select class="hidden-md-up" data-type="filled">
+                <label>{l s='Language:' d='Shop.Theme.Global'}</label>
                 <select class="link" name="mdc-select" slot="select" aria-labelledby="language-selector-label">
                     {foreach from=$languages item=language}
                         <option value="{url entity='language' id=$language.id_lang}"{if $language.id_lang == $current_language.id_lang} selected="selected"{/if} data-iso-code="{$language.iso_code}">{$language.name_simple}</option>
                     {/foreach}
                 </select>
-                <label>{l s='Language:' d='Shop.Theme.Global'}</label>
             </mdc-select>
         </div>
     </div>
