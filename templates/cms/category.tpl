@@ -1,5 +1,11 @@
 {extends file='page.tpl'}
 
+{block name="page_banner"}
+    {if $cms_category.image }
+      <img src="{$cms_category.image}" style="width: 100%;">
+    {/if}
+{/block}
+
 {block name='page_title'}
     {$cms_category.name}
 {/block}

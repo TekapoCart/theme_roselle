@@ -59,6 +59,7 @@
 
 <div class="header-bottom">
     {hook h='displayNavFullWidth'}
+    {block name="page_banner"}{/block}
 </div>
 
 {* sidebar start *}

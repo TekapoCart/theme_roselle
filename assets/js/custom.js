@@ -22,7 +22,7 @@ const movingArea = document.querySelector('#moving-area'),
     desktopDialogue = document.querySelector('#desktop-dialogue'),
     mobileDialogue = document.querySelector('#mobile-dialogue');
 function startMoving() {
-    if (movingPos > 0 && window.pageYOffset + window.outerHeight > movingPos) {
+    if (movingPos > 0 && window.scrollY + window.innerHeight > movingPos) {
         movingItem.classList.add('enlarge');
         desktopDialogue.style.visibility = 'visible';
         mobileDialogue.style.display = 'block';
