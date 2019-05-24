@@ -40,10 +40,8 @@
       z-index: 11;
       top: -50px;
       left: 50%;
-      margin-left: -138px; /* max-width /2 */
       transition: all 0.4s ease 0s;
       a {
-        max-width: 276px;
         display: block;
         margin: auto;
         transition: all 0.4s ease 0s;
@@ -57,10 +55,6 @@
         max-height: initial;
       }
       &.shrink {
-        margin-left: -54px; /* max-width /2 */
-        a {
-          max-width: 106px;
-        }
         img {
           border-width: 2px;
         }
@@ -97,7 +91,6 @@
     a {
       color: #fff;
       font-size: 18px;
-      /*margin-left: -35px;*/
       height: 40px;
       display: block;
       text-align: center;
@@ -112,6 +105,18 @@
 @media (min-width: 992px) {
   #header, body#checkout #header {
     .header-top {
+      .logo-wrapper {
+        margin-left: -138px; /* max-width /2 */
+        a {
+          max-width: 276px;
+        }
+        &.shrink {
+          margin-left: -54px; /* max-width /2 */
+          a {
+            max-width: 106px;
+          }
+        }
+      }
       .menu-wrapper {
         .top-menu {
           a[data-depth="0"] {
@@ -127,12 +132,14 @@
   #header, body#checkout #header {
     .header-top {
       .logo-wrapper {
-        .logo {
-          /*margin-left: 90px;*/
+        margin-left: -103px; /* max-width /2 */
+        a {
+          max-width: 206px;
         }
         &.shrink {
-          .logo {
-            /*margin-left: 35px;*/
+          margin-left: -54px; /* max-width /2 */
+          a {
+            max-width: 106px;
           }
         }
       }
@@ -161,11 +168,21 @@
       left: 50%;
       top: 1px;
       padding-top: 0;
-      margin-left: -38px;
+      margin-left: -58px;
+      transition: all 0.4s ease 0s;
+      .logo {
+        transition: all 0.4s ease 0s;
+        max-height: 116px;
+      }
+      &.shrink {
+        margin-left: -38px;
+        .logo {
+          max-height: 76px;
+        }
+      }
+
     }
-    .logo {
-      max-height: 76px;
-    }
+
   }
 
   .carousel .carousel-item img {

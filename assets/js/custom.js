@@ -2,15 +2,18 @@
 const navbar = document.querySelector('#roselle-navbar'),
     navbarPH = document.querySelector('#roselle-navbar-placeholder'),
     logoWP = document.querySelector('.logo-wrapper'),
+    topLogo = document.querySelector('.top-logo'),
     stickyPos = navbar.offsetHeight;
 function logoShrink() {
     if (window.pageYOffset < stickyPos) {
         navbar.classList.remove('navbar-fixed-top');
         logoWP.classList.remove('shrink');
+        topLogo.classList.remove('shrink');
         navbarPH.style.height = 0;
     } else {
         navbar.classList.add('navbar-fixed-top');
         logoWP.classList.add('shrink');
+        topLogo.classList.add('shrink');
         navbarPH.style.height = stickyPos;
     }
 }
