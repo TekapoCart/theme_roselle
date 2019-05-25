@@ -43,8 +43,7 @@
     margin-left: 0;
     transition: all 3s ease 0s;
     &.enlarge {
-      max-width: 100%;
-      width: 75%;
+      max-width: 300px;
       margin-left: 240px;
     }
   }
@@ -106,6 +105,11 @@
       top: 10%;
     }
   }
+  #moving-item {
+    &.enlarge {
+      max-width: 270px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -115,10 +119,17 @@
     }
     #moving-item {
       &.enlarge {
-        width: 57%;
+        max-width: 200px;
         margin-left: 80px;
       }
     }
   }
 }
 
+@media (max-width: 374px) {
+  #moving-item {
+    &.enlarge {
+      max-width: 150px;
+    }
+  }
+}
