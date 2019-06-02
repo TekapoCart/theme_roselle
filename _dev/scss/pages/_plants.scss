@@ -1,0 +1,55 @@
+.plants {
+  .box {
+    position: relative;
+    img {
+      padding: 20px;
+      border-radius: 38% 62% 65% 35% / 39% 42% 58% 61%;
+    }
+    .desc {
+      position: absolute;
+      top: 60%;
+      width: 100%;
+      .time {
+        width: 55px;
+        background: rgba(0, 0, 0, 0.5);;
+        color: #ddd;
+        padding: 0 10px;
+        font-size: 14px;
+      }
+      .name {
+        width: 95px;
+        background: $primary-link-color;
+        color: #fff;
+        padding: 10px;
+        font-size: 22px;
+      }
+    }
+
+    &:nth-child(4n) {
+      img {
+        border-radius: 56% 44% 29% 71% / 39% 42% 58% 61%;
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width : 767px ) {
+  .plants {
+    .box {
+      img {
+        padding: 5px 0;
+      }
+      .desc {
+        position: relative;
+        margin-bottom: 20px;
+        .name {
+          width: 80px;
+          font-size: 17px;
+          padding: 5px 10px;
+        }
+      }
+
+    }
+  }
+}

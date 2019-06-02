@@ -45,7 +45,6 @@ global_settings:
         - simplicity_footerbar
       displayFooterBefore:
         - ps_emailsubscription
-        - ps_socialfollow
       displayFooter:
         - ps_linklist
       displayFooterAfter:

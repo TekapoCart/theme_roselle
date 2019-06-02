@@ -1,10 +1,41 @@
 #footer {
   > .container {
     width: 100%;
-    padding-top: 50px;
+    /*padding-top: 50px;*/
     padding-bottom: 20px;
   }
   .footer-container {
     margin-top: 0;
+  }
+  .block_newsletter {
+    p {
+      padding: 0;
+      margin: 0;
+      img {
+        max-width: 245px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width : 768px ) {
+  #footer {
+    .block_newsletter {
+      padding-top: 50px;
+      form {
+        padding-top: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 767px ) {
+  #footer {
+    .block_newsletter {
+      padding-top: 30px;
+      form {
+        padding-top: 20px;
+      }
+    }
   }
 }

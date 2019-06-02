@@ -28,6 +28,16 @@ h1 {
   margin-top: $secondary-block-spacing;
 }
 
+@media only screen and (min-width : 768px ) {
+  h1 {
+    &.text-md-large {
+      font-size: 45px;
+    }
+  }
+}
+
+
+
 body#checkout #header .header-nav,
 body#checkout #header .header-top {
   padding-bottom: 4px;
@@ -43,9 +53,17 @@ body#checkout #header .header-top {
   }
 }
 
+.breadcrumb {
+  display: none;
+}
+
 .dropdown-item:focus,
 .dropdown-item:hover {
   color: $primary-link-color;
+}
+
+.top-menu .sub-menu ul[data-depth="1"] > li:first-child {
+  padding-top: 10px;
 }
 
 @media (max-width: 767px) {
@@ -57,4 +75,53 @@ body#checkout #header .header-top {
 #mobile_top_menu_msc_wrapper .js-top-menu-bottom a,
 #mobile_top_menu_wrapper .js-top-menu-bottom a {
   color: #000;
+}
+
+.line-behind {
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 5px;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  &:before {
+    border-top: 1px solid $listing-desc-color;
+    content:"";
+    margin: 0 auto;
+    position: absolute;
+    top: 50%; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    width: 80%;
+  }
+  span {
+    background: $primary-background;
+    padding: 0 15px;
+  }
+}
+
+hr.symbolic {
+  background: url('../img/hr.svg') no-repeat top center;
+  background-size: contain;
+  display: block;
+  height: 64px;
+  border: 0;
+  position: relative;
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: $primary-seperator-color;
+    height: 1px;
+    top: 28px;
+  }
+  &:before {
+    left: 0;
+    right: 50%;
+    margin-right: 30px;
+  }
+  &:after {
+    right: 0;
+    left: 50%;
+    margin-left: 30px;
+  }
 }
