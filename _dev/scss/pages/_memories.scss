@@ -1,0 +1,87 @@
+.memories {
+  .memory {
+
+    h1 {
+      font-weight: 400;
+    }
+    h3 {
+      font-weight: 400;
+    }
+    .magnifier {
+      img {
+        max-width: 160px;
+        border-radius: 100px;
+        border: 5px solid $primary-background;
+      }
+    }
+  }
+  .col-xs-6 {
+    &:nth-child(2n) {
+      padding-left: 5px;
+      padding-right: 0;
+    }
+    &:nth-child(2n+1) {
+      padding-left: 0;
+      padding-right: 5px;
+    }
+  }
+  .col-xs-12 {
+    padding-left: 10px;
+    padding-right: 10px;
+    &.full {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@media only screen and (min-width : 768px ) {
+  .memories {
+    .memory {
+      margin-bottom: 50px;
+      .subtitle {
+        font-size: 35px;
+        margin-top: 50px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+      p {
+        font-size: 16px;
+        margin-top: 30px;
+      }
+      .magnifier {
+        position: absolute;
+        top: 13%;
+        right: -100px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 767px ) {
+  .memories {
+    .memory {
+      margin-bottom: 20px;
+      .subtitle {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      h1 {
+        font-size: 22px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
