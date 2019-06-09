@@ -1,0 +1,38 @@
+.element {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  background: #fff;
+  border-radius: 53% 47% 53% 47% / 58% 42% 58% 42% ;
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.mix {
+  padding: 0 30px;
+  .col-xs-4, .col-xs-6, .col-xs-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (min-width : 768px ) {
+  .text {
+    min-height: 230px;
+    /*
+    border-bottom: 3px solid $focus-background;
+    box-shadow: 0 3px 0 #fff;
+    */
+    &.higher {
+      min-height: 320px;
+      padding-top: 50px;
+    }
+  }
+}
+
+@media only screen and (max-width : 767px ) {
+
+}
+
