@@ -84,7 +84,7 @@
   }
 
   #menu-icon {
-    margin-top: 20px;
+    margin-top: 16px;
   }
 
   .scroll-down {
@@ -172,16 +172,16 @@
 @media (max-width: 767px) {
   #header, body#checkout #header {
     .mobile {
-      min-height: unset;
+      min-height: 60px;
       .top-logo {
-        padding: 12px 0;
+        padding: 4px 0;
       }
     }
     .header-top {
       background: transparent;
       position: relative;
       .blockcart {
-        margin-top: 20px;
+        margin-top: 16px;
       }
     }
     .header-bottom {
