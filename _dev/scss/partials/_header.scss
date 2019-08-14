@@ -83,6 +83,10 @@
     }
   }
 
+  #menu-icon {
+    margin-top: 20px;
+  }
+
   .scroll-down {
     position: absolute;
     bottom: 15%;
@@ -167,9 +171,18 @@
 
 @media (max-width: 767px) {
   #header, body#checkout #header {
+    .mobile {
+      min-height: unset;
+      .top-logo {
+        padding: 12px 0;
+      }
+    }
     .header-top {
       background: transparent;
       position: relative;
+      .blockcart {
+        margin-top: 20px;
+      }
     }
     .header-bottom {
       min-height: 80px;
