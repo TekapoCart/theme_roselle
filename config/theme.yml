@@ -36,11 +36,11 @@ global_settings:
         - ps_mainmenu
       displayNavFullWidth:
         - ps_imageslider
-        - ps_banner
       displayHome:
         - simplicity_cmsblock
       displayHomeAfter:
         - ps_customtext
+        - ps_banner
       displayWrapperBottom:
         - simplicity_footerbar
       displayFooterBefore:
