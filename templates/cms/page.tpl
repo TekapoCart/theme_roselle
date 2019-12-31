@@ -1,7 +1,7 @@
 {extends file='page.tpl'}
 
 {block name="page_banner"}
-    {if $cms.image }
+    {if isset($cms.image) }
         <img src="{$cms.image}" style="width: 100%;">
     {/if}
 {/block}
